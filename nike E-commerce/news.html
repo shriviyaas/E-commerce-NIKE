@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Nike Saturn</title>
+    <link rel="stylesheet" href="index.css">
+</head>
+<body>
+
+    <header><nav class="nav1">
+        <img src="OIP.jpeg" class="img" alt="nike ">
+        <li><a href="intro.html">Home</a></li>
+        <li><a href="Mens.html"  >Mens</a></li>         
+        <li><a href="Customize.html">Customize</a> </li>
+        <li><a href="news.html">New & Feature</a></li>
+        <img src="OIP (1).jpeg" class="img" alt="jordan">
+        </nav></header>
+
+        <nav class="subnav1">
+            <p class="mem">Nike Membership</p>
+
+            <a class="signup" href="signup.html">Sign Up</a>
+        </nav>
+
+        <div class="home">
+            <img src="img1.png" alt="home">
+            <img src="fo.png" alt="tag">
+        </div>
+
+        <div class="slider">
+            <p> Shop by Sport</p>
+            <button class="prev" onclick="prevSlide()">&#10094;</button>
+        <div class="shop">
+            <div class="image">
+                <img src="boxing.jpeg" alt="">
+                <button class="btn">choose</button>
+
+            </div>
+            <div class="image">
+                <img src="running.jpeg" alt="jogging">
+                <button class="btn">choose</button>
+            </div>
+            <div class="image">
+                <img src="running1.jpeg" alt="running">
+                <button class="btn">choose</button>
+            </div>
+            <div class="image">
+                <img src="cycling.jpeg" alt="cycling">
+                <button class="btn">choose</button>
+            </div>  
+            <div class="image">
+                <img src="footbal.jpeg" alt="football">
+                <button class="btn">choose</button>
+            </div>
+            <div class="image">
+                <img src="baseball.jpeg" alt="football">
+                <button class="btn">choose</button>
+            </div><div class="image">
+                <img src="basket.jpeg" alt="football">
+                <button class="btn">choose</button>
+            </div>
+        </div>
+        
+        <button class="next" onclick="nextSlide()">&#10095;</button>
+    </div>
+
+    <img src="videoframe_657.png" alt="">
+    
+    <script>// script.js
+
+       // script.js
+
+const imagesContainer = document.querySelector('.shop');
+const images = document.querySelectorAll('.image');
+let currentIndex = 0;
+const slideWidth = images[0].clientWidth + parseInt(getComputedStyle(images[0]).marginRight);
+
+function nextSlide() {
+    if (currentIndex < images.length - 1) {
+        currentIndex++;
+        imagesContainer.style.transform = `translateX(-${slideWidth * currentIndex}px)`;
+    } else {
+        currentIndex = 0;
+        imagesContainer.style.transform = `translateX(0)`;
+    }
+}
+
+function prevSlide() {
+    if (currentIndex > 0) {
+        currentIndex--;
+        imagesContainer.style.transform = `translateX(-${slideWidth * currentIndex}px)`;
+    } else {
+        currentIndex = images.length - 1;
+        imagesContainer.style.transform = `translateX(-${slideWidth * currentIndex}px)`;
+    }
+}
+
+        </script>
+</body>
+</html>

@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Product Details - Nike</title>
+    <link rel="stylesheet" href="styles1.css">
+</head>
+<body>
+    <div class="product-details-container">
+        <div class="product-image">
+            <img src="shoe1.jpg" alt="Nike Shoe 1">
+            
+        </div>
+        <div class="product-info">
+            <h1>Nike Air Max</h1>
+            <p class="price">MRP: 3500/-</p>
+            <div class="sizes">
+                <h2>Sizes</h2>
+                <ul>
+                    <li>7</li>
+                    <li>8</li>
+                    <li>9</li>
+                    <li>10</li>
+                    <li>11</li>
+                </ul>
+            </div>
+            <div class="colors">
+                <h2>Colors</h2>
+                <ul>
+                    <li>Red</li>
+                    <li>Blue</li>
+                    <li>Black</li>
+                    <li>White</li>
+                </ul>
+            </div>
+            <div class="details">
+                <h2>Product Details</h2>
+                <p>High-quality materials. Durable sole. Perfect for running and everyday use.</p>
+
+                <p>With its easy-going lines, heritage athletics look and, of course, visible Air cushioning, the Nike Air Max SC is the perfect finish to any outfit. The rich mixture of materials adds depth while making it a durable and lightweight shoe for everyday wear.
+                    <ul>
+                    <li>Colour Shown: Wolf Grey/Burgundy Crush/White/Dark Team Red</li>
+                    <li>Style: CW4555-016</li></ul></p>
+            </div>
+            <button class="add-to-cart">Add to Cart</button>
+        </div>
+    </div>
+    <div class="additional-info">
+        <div class="reviews">
+            <h2>Customer Reviews</h2>
+            <p>★★★★☆</p>
+            <p>"Great shoe, very comfortable!" - John Doe</p>
+            <p>"Excellent quality, highly recommend." - Jane Smith</p>
+        </div>
+        <div class="shipment">
+            <h2>Shipment Details</h2>
+            <p>Ships within 3-5 business days. Free shipping on orders over $50.</p>
+        </div>
+    </div>
+
+    <script>// script.js
+
+        document.addEventListener('DOMContentLoaded', function() {
+            const products = document.querySelectorAll('.product');
+            
+            products.forEach(product => {
+                product.addEventListener('click', function() {
+                    const productName = this.querySelector('p').textContent;
+                    const productImage = this.querySelector('img').src;
+                    
+                    // Load product details dynamically
+                    document.querySelector('.product-info h1').textContent = productName;
+                    document.querySelector('.product-image img').src = productImage;
+                });
+            });
+        });
+        </script>
+</body>
+</html>
