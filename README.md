@@ -12,3 +12,7 @@ Login page :
 Home page :
 
 <img width="909" alt="image" src="https://github.com/user-attachments/assets/7197e10a-833e-462c-abb5-194446fa5550">
+
+my portfolio page when i click the nike logo 
+
+<img width="903" alt="image" src="https://github.com/user-attachments/assets/bd01c6c7-2575-43a5-a255-1fdbc96e1dfb">
